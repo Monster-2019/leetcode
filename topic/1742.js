@@ -14,4 +14,5 @@ var numWays = function(n) {
     return a % 1000000007 === 1000000008 ? 1 : a % 1000000007
 };
 a = numWays(78)
+console.log(123)
 console.log(a)
