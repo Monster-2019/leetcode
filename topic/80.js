@@ -1,0 +1,23 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+    tem = 0
+    count = 0
+    for (let i = 0; i < nums.length; i++) {
+        if (tem !== nums[i]) {
+            tem = nums[i]
+            count = 1
+        } else if (tem === nums[i]) {
+            count++
+        }
+        if (count > 2) {
+            nums.splice(i, 1)
+            i--
+        }
+    }
+    return nums.length
+};
+
+console.log(removeDuplicates([0, 0, 1, 1, 1, 1, 2, 3, 3]))
